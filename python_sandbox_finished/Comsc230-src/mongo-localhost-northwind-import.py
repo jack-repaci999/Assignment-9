@@ -9,12 +9,14 @@ myclient = MongoClient("mongodb://localhost:27017/")
 db = myclient["northwind"] 
 
 # Path to data file
-fileName= 'employees.json'
+fileName = 'employees.json'
 folderPath = os.getcwd()
+filePath = folderPath +'\'+ fileName
+#folderPath = "C:\Users\18607\OneDrive\Documents\Github\RWU\Comsc230\Assignments\Assignment 9\Comsc230-python-sandbox\Datafiles"
 print("folderPath: ", folderPath) # print path for debugging
 
-filePath = folderPath+'/DataFiles/'+fileName
-
+#filePath = folderPath +'\'+ fileName
+#filePath = """C:\Users\18607\OneDrive\Documents\Github\RWU\Comsc230\Assignments\Assignment 9\Comsc230-python-sandbox\Datafiles"""
 # Created or Switched to collection 
 
 Collection = db["employees"] 
